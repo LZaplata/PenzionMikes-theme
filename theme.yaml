@@ -5,4 +5,3 @@ authorCode: LZaplata
 code: penzionmikes
 require:
     - Martin.Forms
-    - lzaplata.gallery
