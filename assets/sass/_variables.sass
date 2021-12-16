@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap')
+
+/***** override bootstrap variables *****/
+
+$font-family-base:                  "Lexend", sans-serif
+$font-size-base:                    1.0625rem
+$font-weight-base:                  400
+$font-weight-semi-bold:             600
+$font-weight-bold:                  700
+$font-weight-bolder:                800
+
+$display-font-sizes:                (1: 2.8125rem, 2: 1.3125)
+$display-font-weight:               $font-weight-semi-bold
+
+$primary:                           #1f363d
+$secondary:                         #4c9f70
+$tertiary:                          #496f5d
+
+$red:                               #ee6c4d
+$yellow:                            #fadf63
+$cyan:                              #89bbfe
+$teal:                              #b8f2ff
+$white:                             #ffffff
+
+$nav-link-font-size:                1rem
+$nav-link-font-weight:              $font-weight-semi-bold
+$nav-link-color:                    $secondary
+$nav-link-hover-color:              $yellow
+$nav-link-padding-x:                0
+
+$offcanvas-bg-color:                $primary
+$offcanvas-color:                   $white
+
+$btn-font-weight:                   $font-weight-bold
+$btn-font-size:                     1.3125
+$btn-border-radius:                 3rem
+$btn-padding-y:                     .5rem
+$btn-padding-x:                     2rem
+$btn-focus-width:                   0
+
+@import "bootstrap/scss/functions"
+@import "bootstrap/scss/variables"
+
+/***** add new theme color *****/
+
+$custom-colors:                     ("tertiary": $tertiary, "cyan": $cyan, "white": $white)
+$theme-colors:                      map-merge($theme-colors, $custom-colors)
+$theme-colors-rgb:                  map-loop($theme-colors, to-rgb, "$value")
+$utilities-colors:                  map-merge($utilities-colors, $custom-colors)
+$utilities-text-colors:             map-loop($utilities-colors, rgba-css-var, "$key", "text")
+$utilities-bg-colors:               map-loop($utilities-colors, rgba-css-var, "$key", "bg")
+
+@import "bootstrap/scss/bootstrap"

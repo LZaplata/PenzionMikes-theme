@@ -1,0 +1,108 @@
+@import "variables"
+
+/***** toggle main menu dropdown on hover *****/
+
+//header
+    #menu
+        .dropdown
+            .dropdown-menu
+                display: none
+
+                &.show
+                    margin-top: -2px !important
+
+            &:hover, &:focus, &:active
+                .dropdown-menu
+                    display: block
+
+/***** end toggle main menu dropdown on hover *****/
+
+html
+    scroll-behavior: smooth
+
+.display1
+    font-weight: $font-weight-bolder
+
+.btn-secondary
+    color: $white !important
+    border: none
+
+    &:hover, &:focus, &:active
+        background: $yellow
+
+.btn-danger
+    color: $white !important
+    border: none
+
+    &:hover, &:focus, &:active
+        background: $yellow
+
+header
+    background: $primary
+
+    #logo
+        a
+            font-size: 1.875rem
+
+            @include media-breakpoint-down(sm)
+                font-size: 1.5rem
+
+            &:hover, &:focus, &:active
+                color: $yellow
+
+    .nav
+        li
+            a
+                margin-left: 50px
+
+    #menu-toggle
+        button
+            padding-left: 1rem
+            padding-right: 1rem
+
+#banner
+    &-container
+        & > div
+            right: 15%
+
+            @include media-breakpoint-down(xl)
+                right: 5%
+
+            @include media-breakpoint-down(lg)
+                right: $grid-gutter-width
+
+            @include media-breakpoint-down(md)
+                right: 50%
+                transform: translateX(50%)
+                width: 100%
+
+            .claim
+                text-shadow: $black 2px 2px 5px
+
+#services
+    &-container
+        .service
+            i
+                font-size: 6rem
+
+            span
+                line-height: 1.4375rem
+                margin-top: -2rem
+
+#copyright-container
+    .signature
+        span
+            mask: url("../images/signature.svg")
+            -webkit-mask: url("../images/signature.svg")
+            width: 85px
+            height: 25px
+            mask-size: cover
+            display: block
+
+#offcanvas
+    .offcanvas-body
+        .nav
+            li
+                a
+                    text-align: center
+                    font-size: $h3-font-size

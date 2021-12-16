@@ -1,0 +1,8 @@
+name: 'Penzion Mikeš'
+description: 'Theme for mountain pension Mikeš in Giant Mountains'
+author: 'Lukáš Záplata'
+authorCode: LZaplata
+code: penzionmikes
+require:
+    - Martin.Forms
+    - lzaplata.gallery

@@ -1,0 +1,10 @@
+node_modules
+meta
+assets/css/*.*
+assets/css/fonts/*.*
+!assets/css/icons.css
+!assets/css/fonts/mikesicons.*
+assets/js/*
+!assets/js/theme.js
+package-lock.json
+.themelock
