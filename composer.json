@@ -1,7 +1,7 @@
 {
-    "name": "lzaplata/bootstrap-5-sass-theme",
+    "name": "lzaplata/penzionmikes-theme",
     "type": "october-theme",
-    "description": "Skeleton theme based on Bootstrap 5 with SASS and Bootstrap Icons.",
+    "description": "Theme for mountain pension Mikeš in Giant Mountains",
     "require": {
         "composer/installers": "~1.0"
     }
