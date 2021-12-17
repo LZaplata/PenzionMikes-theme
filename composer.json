@@ -7,6 +7,6 @@
     ],
     "require": {
         "composer/installers": "~1.0",
-        "lzaplata/gallery-plugin": "master"
+        "lzaplata/gallery-plugin": "dev-master"
     }
 }
