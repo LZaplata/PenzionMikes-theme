@@ -2,11 +2,11 @@
     "name": "lzaplata/penzionmikes-theme",
     "type": "october-theme",
     "description": "Theme for mountain pension Mikeš in Giant Mountains",
-    "require": {
-        "composer/installers": "~1.0",
-        "lzaplata/gallery-plugin": "dev-master"
-    },
     "repositories": [
         {"type": "vcs", "url": "https://github.com/LZaplata/Gallery-plugin.git"}
-    ]
+    ],
+    "require": {
+        "composer/installers": "~1.0",
+        "lzaplata/gallery-plugin": "master"
+    }
 }
