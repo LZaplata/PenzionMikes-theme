@@ -1,7 +1,7 @@
 let {src, dest, watch, parallel} = require("gulp");
 let sass = require("gulp-sass");
 let minify = require("gulp-clean-css");
-let themeDir = "./themes/penzionmikes";
+let themeDir = "./themes/lzaplata-penzionmikes";
 
 function sassTask() {
     return src(themeDir + "/assets/sass/theme.sass")
@@ -10,7 +10,10 @@ function sassTask() {
 }
 
 function cssTask() {
-    return src("node_modules/bootstrap-icons/font/bootstrap-icons.css")
+    return src([
+        "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+        "node_modules/swiper/swiper-bundle.css"
+    ])
         .pipe(minify())
         .pipe(dest(themeDir + "/assets/css"))
 }
@@ -24,7 +27,8 @@ function jsTask() {
     return src([
         "node_modules/jquery/dist/jquery.min.js",
         "node_modules/bootstrap/dist/js/bootstrap.js",
-        "node_modules/@popperjs/core/dist/umd/popper.js"
+        "node_modules/@popperjs/core/dist/umd/popper.js",
+        "node_modules/swiper/swiper-bundle.js"
     ])
         .pipe(dest(themeDir + "/assets/js"))
 }

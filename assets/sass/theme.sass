@@ -30,12 +30,35 @@ html
     &:hover, &:focus, &:active
         background: $yellow
 
+.btn-outline-secondary
+    &:hover, &:focus, &:active
+        color: $white
+
 .btn-danger
     color: $white !important
     border: none
 
     &:hover, &:focus, &:active
         background: $yellow
+
+.btn-outline-tertiary
+    &:hover, &:focus, &:active
+        background: $yellow
+        color: $tertiary
+        border-color: $yellow
+
+.lh-29
+    line-height: 29px
+
+.fs-15
+    font-size: 0.9375rem
+
+@each $name, $value in $theme-colors
+    .hover-#{$name}
+        transition: $transition-base
+
+        &:hover, &:focus, &:active
+            color: $value !important
 
 header
     background: $primary
@@ -89,7 +112,26 @@ header
                 line-height: 1.4375rem
                 margin-top: -2rem
 
-#copyright-container
+#fotogalerie
+    #gallery-container
+        .swiper
+            .swiper-button
+                &-prev
+                    color: $white
+
+                &-next
+                    color: $white
+
+#kontakt
+    form
+        .input-group
+            .input-group-text
+                padding-right: 0
+
+            .form-control
+                padding-left: .5rem
+
+footer
     .signature
         span
             mask: url("../images/signature.svg")

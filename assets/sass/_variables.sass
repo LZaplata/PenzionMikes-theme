@@ -9,7 +9,7 @@ $font-weight-semi-bold:             600
 $font-weight-bold:                  700
 $font-weight-bolder:                800
 
-$display-font-sizes:                (1: 2.8125rem, 2: 1.3125)
+$display-font-sizes:                (1: 2.8125rem, 2: 1.3125rem)
 $display-font-weight:               $font-weight-semi-bold
 
 $primary:                           #1f363d
@@ -34,16 +34,35 @@ $offcanvas-color:                   $white
 $btn-font-weight:                   $font-weight-bold
 $btn-font-size:                     1.3125
 $btn-border-radius:                 3rem
+$btn-border-width:                  3px
 $btn-padding-y:                     .5rem
 $btn-padding-x:                     2rem
 $btn-focus-width:                   0
+
+$card-border-radius:                1.5rem
+$card-bg:                           $secondary
+$card-border-width:                 0
+$card-color:                        $white
+$card-spacer-x:                     2rem
+$card-spacer-y:                     1.5rem
+
+$input-placeholder-color:           $primary
+$input-font-size:                   1rem
+$input-border-color:                #fff
+$input-border-radius:               3rem
+$input-padding-x:                   1.3rem
+$input-padding-y:                   .6rem
+$input-focus-border-color:          #fff
+$input-focus-box-shadow:            none
+$input-group-addon-bg:              #fff
+$input-group-addon-color:           $primary
 
 @import "bootstrap/scss/functions"
 @import "bootstrap/scss/variables"
 
 /***** add new theme color *****/
 
-$custom-colors:                     ("tertiary": $tertiary, "cyan": $cyan, "white": $white)
+$custom-colors:                     ("tertiary": $tertiary, "cyan": $cyan, "white": $white, "yellow": $yellow, "teal": $teal)
 $theme-colors:                      map-merge($theme-colors, $custom-colors)
 $theme-colors-rgb:                  map-loop($theme-colors, to-rgb, "$value")
 $utilities-colors:                  map-merge($utilities-colors, $custom-colors)

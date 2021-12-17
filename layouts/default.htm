@@ -16,24 +16,25 @@
             'assets/css/theme.css',
             'assets/css/bootstrap-icons.css',
             'assets/css/icons.css',
+            'assets/css/swiper-bundle.css',
         ]|theme }}" />
     </head>
 
     <body class="d-flex flex-column h-100">
         {% partial "header" %}
 
-        <main data-bs-spy="scroll" data-bs-target="#main-menu" data-bs-offset="0">
+        <main>
             {% page %}
         </main>
 
         {% partial "footer" %}
-        {% partial "copyright" %}
         {% partial "offcanvas" %}
 
         <script src="{{ [
             'assets/js/jquery.min.js',
             'assets/js/popper.js',
-            'assets/js/theme.js'
+            'assets/js/theme.js',
+            'assets/js/swiper-bundle.js'
         ]|theme }}"></script>
 
         <script src="{{ 'assets/js/bootstrap.js'|theme }}"></script>
