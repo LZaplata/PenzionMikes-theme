@@ -50,7 +50,14 @@
                     <i class="bi bi-calendar-x"></i>
                 </span>
 
-                <input type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" id="departure" name="departure" class="form-control" placeholder="Datum příjezdu">
+                <input
+                    type="date"
+{#                    onfocus="(this.type='date')"#}
+{#                    onblur="if(this.value==''){this.type='text'}"#}
+                    id="departure"
+                    name="departure"
+                    class="form-control"
+                    placeholder="Datum odjezdu">
             </div>
         </div>
 
@@ -79,3 +86,12 @@
         </div>
     </div>
 </form>
+
+<script>
+    // var departure = document.getElementById("departure");
+    //
+    // departure.onfocus = function (event) {
+    //     this.type = "date";
+    //     this.focus();
+    // };
+</script>
