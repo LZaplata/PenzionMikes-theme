@@ -12,7 +12,8 @@ function sassTask() {
 function cssTask() {
     return src([
         "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-        "node_modules/swiper/swiper-bundle.css"
+        "node_modules/swiper/swiper-bundle.css",
+        "node_modules/mc-datepicker/dist/mc-calendar.min.css",
     ])
         .pipe(minify())
         .pipe(dest(themeDir + "/assets/css"))
@@ -28,7 +29,8 @@ function jsTask() {
         "node_modules/jquery/dist/jquery.min.js",
         "node_modules/bootstrap/dist/js/bootstrap.js",
         "node_modules/@popperjs/core/dist/umd/popper.js",
-        "node_modules/swiper/swiper-bundle.js"
+        "node_modules/swiper/swiper-bundle.js",
+        "node_modules/mc-datepicker/dist/mc-calendar.min.js",
     ])
         .pipe(dest(themeDir + "/assets/js"))
 }

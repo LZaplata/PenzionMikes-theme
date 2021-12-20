@@ -40,10 +40,10 @@
                     <i class="bi bi-calendar-check"></i>
                 </span>
 
-                <input type="date"
-{#                    onfocus="(this.type='date')" #}
-{#                    onblur="if(this.value==''){this.type='text'}" #}
-                    id="arrival" name="arrival"
+                <input
+                    type="text"
+                    id="arrival"
+                    name="arrival"
                     class="form-control"
                     placeholder="Datum příjezdu">
             </div>
@@ -57,8 +57,6 @@
 
                 <input
                     type="text"
-{#                    onfocus="(this.type='date')"#}
-{#                    onblur="if(this.value==''){this.type='text'}"#}
                     id="departure"
                     name="departure"
                     class="form-control"
@@ -87,16 +85,37 @@
         </div>
 
         <div class="form-group d-none">
-            {% partial '@recaptcha' %}
+            {% partial "@recaptcha" %}
         </div>
     </div>
 </form>
 
-<script>
-    var departure = document.getElementById("departure");
+{% put scripts %}
+    <script>
+        const arrivalDatePicker = MCDatepicker.create({
+            el: "#arrival",
+            bodyType: "inline",
+            dateFormat: "d.m.yyyy",
+            autoClose: true,
+            closeOnBlur: true,
+            firstWeekday: 1,
+            customWeekDays: ["Neděle", "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota"],
+            customMonths: ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"],
+            customClearBTN: 'Smazat',
+            customCancelBTN: 'Zrušit',
+        });
 
-    departure.onfocus = function (event) {
-        this.type = "date";
-        this.focus();
-    };
-</script>
+        const departureDatePicker = MCDatepicker.create({
+            el: "#departure",
+            bodyType: "inline",
+            dateFormat: "d.m.yyyy",
+            autoClose: true,
+            closeOnBlur: true,
+            firstWeekday: 1,
+            customWeekDays: ["Neděle", "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota"],
+            customMonths: ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"],
+            customClearBTN: 'Smazat',
+            customCancelBTN: 'Zrušit',
+        });
+    </script>
+{% endput %}
