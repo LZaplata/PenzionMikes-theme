@@ -66,6 +66,7 @@ header
     #logo
         a
             font-size: 1.875rem
+            transition: $transition-base
 
             @include media-breakpoint-down(sm)
                 font-size: 1.5rem
@@ -152,6 +153,10 @@ footer
             height: 25px
             mask-size: cover
             display: block
+            transition: $transition-base
+
+            &:hover, &:focus, &:active
+                background-color: $cyan !important
 
 #offcanvas
     .offcanvas-body
